@@ -1,547 +1,472 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aileen Fusana — Senior QA Analyst</title>
+  <meta name="description" content="Aileen “Yen” Fusana — Senior QA Analyst with 7+ years in web, mobile, manual and automated testing (Playwright, Postman, Appium).">
+  <meta name="theme-color" content="#0e0c12">
+  <meta property="og:title" content="Aileen Fusana — Senior QA Analyst">
+  <meta property="og:description" content="I find the bugs before your users do.">
+  <meta property="og:image" content="assets/img/portrait.webp">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%23ff6b4a'/><path d='M18 33l9 9 19-20' stroke='white' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/portfolio.css">
+  <script>
+    try { var t = localStorage.getItem('af-theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body id="top">
+  <div class="grain" aria-hidden="true"></div>
 
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    
-
-    <title>My Portfolio</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-eduwell-style.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/lightbox.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-  </head>
-
-<body>
-
-  <!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky">
-      <div class="container">
-          <div class="row">
-              <div class="col-12">
-                  <nav class="main-nav">
-                      <!-- ***** Logo Start ***** -->
-                      <a href="index.html" class="logo">
-                          <!--<img src="assets/images/Aileen-Fusana.png" alt="Aileen-Fusana">-->
-                      </a>
-                      <!-- ***** Logo End ***** -->
-                      <!-- ***** Menu Start ***** -->
-                      <ul class="nav">
-                          <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                          <li class="scroll-to-section"><a href="#services">About Me</a></li>
-                          <li class="scroll-to-section"><a href="#courses">My Expertise</a></li>
-                          <li class="has-sub">
-                              <a href="javascript:void(0)">My Pages</a>
-                              <ul class="sub-menu">
-                                  <li><a href="my-journey.html">My Journey</a></li>
-                                  <li><a href="my-personal-blog.html">My Personal Blog</a></li>
-                                  <!--<li><a href="contact-us.html">Contact Me</a></li>-->
-                              </ul>
-                          </li>
-                          <!--<li class="scroll-to-section"><a href="#testimonials">Testimonials</a></li>--> 
-                          <li class="scroll-to-section"><a href="#contact-section">Contact Me</a></li> 
-                      </ul>        
-                      <a class='menu-trigger'>
-                          <span>Menu</span>
-                      </a>
-                      <!-- ***** Menu End ***** -->
-                  </nav>
-              </div>
-          </div>
-      </div>
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="Aileen Fusana, home">
+      <span class="brand-mark">AF</span>
+      <span class="brand-name">Aileen Fusana</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#approach">Approach</a>
+      <a href="#experience">Experience</a>
+      <a href="#life">Off duty</a>
+    </nav>
+    <div class="nav-actions">
+      <span class="bug-counter" title="Hidden bugs on this page — can you find them all?">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-bug"/></svg>
+        <span><b id="bugs-found">0</b>/<span id="bugs-total">5</span></span>
+      </span>
+      <button class="icon-btn" id="theme-toggle" aria-label="Toggle colour theme">
+        <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>
+      </button>
+      <a class="btn btn-sm btn-primary nav-cta" href="#contact">Hire me</a>
+      <button class="icon-btn menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
   </header>
-  <!-- ***** Header Area End ***** -->
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <a href="#about">About</a>
+    <a href="#expertise">Expertise</a>
+    <a href="#approach">Approach</a>
+    <a href="#experience">Experience</a>
+    <a href="#life">Off duty</a>
+    <a href="#contact" class="btn btn-primary">Hire me</a>
+  </div>
 
-  <!-- ***** Main Banner Area Start ***** -->
-  <section class="main-banner" id="top">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 align-self-center">
-          <div class="header-text">
-            <!--<h6>Welcome to our school</h6>-->
-            <h2>Aileen Fusana <em>Senior QA Analyst</em></h2>
-            <div class="main-button-gradient">
-              <div class="scroll-to-section"><!--<a href="https://www.linkedin.com/in/aileen-fusana/" target="_blank" title="Linkedin">HIRE ME</a>-->
-              </div>
-            <ul><li><a href="https://www.linkedin.com/in/aileen-fusana/" target="_blank" title="Linkedin">Hire Me</a></li></ul>
-            </div>
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow reveal"><span class="pulse"></span> Senior QA Analyst · open to remote work</p>
+          <h1 class="display reveal">
+            I find the bugs <em>before</em> your users&nbsp;do.
+          </h1>
+          <p class="lede reveal">
+            Hi, I’m <strong>Aileen “Yen” Fusana</strong>. For 7+ years I’ve tested web and mobile products for local and international teams,
+            turning messy edge cases into calm, confident releases.
+          </p>
+          <div class="hero-ctas reveal">
+            <a class="btn btn-primary" href="#contact">
+              Let’s work together
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn-ghost" href="#expertise">See what I test</a>
           </div>
+          <dl class="stats reveal">
+            <div><dt>Years in QA</dt><dd><span data-count="7">7</span>+</dd></div>
+            <div><dt>Projects shipped</dt><dd><span data-count="15">15</span></dd></div>
+            <div><dt>Companies</dt><dd><span data-count="3">3</span></dd></div>
+            <div><dt>Cats supervising</dt><dd><span data-count="4">4</span></dd></div>
+          </dl>
         </div>
-        <div class="col-lg-6">
-          <div class="right-image">
-            <img src="assets/images/banner-right-image.png" alt="">
+
+        <div class="hero-visual reveal">
+          <div class="portrait-wrap">
+            <div class="blob" aria-hidden="true"></div>
+            <div class="ring" aria-hidden="true"></div>
+            <img class="portrait" src="assets/img/portrait.webp" width="900" height="1200" alt="Portrait of Aileen Fusana in a black blazer, seated in an office">
+            <span class="bug bug-hero" data-bug role="button" tabindex="0" aria-label="A hidden bug — squash it"><svg viewBox="0 0 24 24"><use href="#i-bug"/></svg></span>
           </div>
+
+          <figure class="terminal" aria-label="Animated test run">
+            <div class="term-bar">
+              <i></i><i></i><i></i>
+              <span>aileen.spec.ts</span>
+            </div>
+            <pre class="term-body" id="term"><span class="t-dim">$</span> npx playwright test</pre>
+          </figure>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- ***** Main Banner Area End ***** -->
+    </section>
 
-  <section class="services" id="services">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="section-heading">
-            <div class="section-heading">
-              <h6></h6>
-            <h4>About <em>ME</em></h4>
-            <p class="about">With over six years of hands-on experience in the field.
-Throughout my career, I’ve had the opportunity to work with 
-
-diverse teams across local and international projects both in
-hybrid and fulltime remote setup, honing my skills in ensuring
-product excellence and seamless user experiences.
-
-I specialize in developing and executing comprehensive test
-strategies, identifying critical issues, and collaborating with
-development teams to drive continuous improvement. My
-background spans a variety of industries, from tech startups to
-established enterprises, allowing me to bring a versatile and
-global perspective to quality assurance.
-
-I’m passionate about leveraging my analytical skills and attention
-to detail to transform complex challenges into polished, user-
-friendly solutions. When I’m not immersed in testing, you’ll find me
-exploring new technologies or sharing insights on best practices
-in QA.</p>
-          </div>
-        </div>
-        <div class="col-lg-12">
-          <div class="owl-service-item owl-carousel">
-            <div class="item">
-              <div class="service-item">
-                <div class="icon">
-                  <img src="assets/images/service-icon-01.png" alt="">
-                </div>
-                <h4>Detail-Oriented
-                  Testing Expertise</h4>
-                <p>Proven ability to identify
-                  subtle bugs and issues
-                  through meticulous
-                  testing.</p>
-              </div>
-            </div>
-            <div class="item">
-              <div class="service-item">
-                <div class="icon">
-                  <img src="assets/images/service-icon-02.png" alt="">
-                </div>
-                <h4>SDLC methodologies</h4>
-                <p>Proficient in SDLC frameworks and processes.Expertise in various
-                  testing methodologies
-                  and tools.</p>
-              </div>
-            </div>
-            <div class="item">
-              <div class="service-item">
-                <div class="icon">
-                  <img src="assets/images/service-icon-03.png" alt="">
-                </div>
-                <h4>Strong Analytical Skills</h4>
-                <p>Ability to analyze complex
-                  systems and understand
-                  how changes impact the
-                  software.</p>
-              </div>
-            </div>
-            <div class="item">
-              <div class="service-item">
-                <div class="icon">
-                  <img src="assets/images/service-icon-04.png" alt="">
-                </div>
-                <h4>Proven Track Record of Improvement</h4>
-                <p>Demonstrated ability to
-                  enhance testing
-                  processes and quality
-                  outcomes.</p>
-              </div>
-            </div>
-            <div class="item">
-              <div class="service-item">
-                <div class="icon">
-                  <img src="assets/images/service-icon-01.png" alt="">
-                </div>
-                <h4>Commitment to
-                  Continuous
-                  Learning</h4>
-                <p>Dedication to staying
-                  current with industry
-                  trends and emerging
-                  technologies.</p>
-              </div>
-            </div>
-            <div class="item">
-              <div class="service-item">
-                <div class="icon">
-                  <img src="assets/images/service-icon-02.png" alt="">
-                </div>
-                <h4>Effective Communication Skills.</h4>
-                <p>Ability to clearly document
-                  issues and communicate
-                  effectively with
-                  development teams.</p>
-              </div>
-            </div>
-          </div>
-        </div>
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-label="Tools I use">
+      <div class="marquee-track">
+        <span>Playwright</span><span>Postman</span><span>Newman</span><span>Appium</span><span>Jira</span><span>Bugzilla</span><span>GitHub Actions</span><span>Jenkins</span><span>WCAG</span><span>OWASP Mobile</span><span>Exploratory testing</span><span>Regression suites</span>
+        <span aria-hidden="true">Playwright</span><span aria-hidden="true">Postman</span><span aria-hidden="true">Newman</span><span aria-hidden="true">Appium</span><span aria-hidden="true">Jira</span><span aria-hidden="true">Bugzilla</span><span aria-hidden="true">GitHub Actions</span><span aria-hidden="true">Jenkins</span><span aria-hidden="true">WCAG</span><span aria-hidden="true">OWASP Mobile</span><span aria-hidden="true">Exploratory testing</span><span aria-hidden="true">Regression suites</span>
       </div>
     </div>
-  </section>
 
-  <section class="our-courses" id="courses">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 offset-lg-3">
-          <div class="section-heading">
-            <h6></h6>
-            <h4>My <em>Expertise</em></h4>
-            <p>With extensive experience in manual and automated testing,
-               I specialize in ensuring the highest software 
-              quality by focusing on test strategy, 
-              execution, and continuous improvement.</p>
-          </div>
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">01 — About me</p>
+          <h2 class="title">Quality is a habit, <em>not a phase.</em></h2>
         </div>
-        <div class="col-lg-12">
-          <div class="naccs">
-            <div class="tabs">
-              <div class="row">
-                <div class="col-lg-3">
-                  <div class="menu">
-                    <div class="active gradient-border"><span>Web App Testing</span></div>
-                    <div class="gradient-border"><span>Mobile App Testing</span></div>
-                    <div class="gradient-border"><span>Manual Testing</span></div>
-                    <div class="gradient-border"><span>Automated Testing</span></div>
-                  </div>
-                </div>
-                <div class="col-lg-9">
-                  <ul class="nacc">
-                    <li class="active">
-                      <div>
-                        <div class="left-image">
-                          <img src="assets/images/web-app.jpg" alt="">
-                          <!--<div class="price"><h6>$128</h6></div>-->
-                        </div>
-                        <div class="right-content">
-                          <h4>Web App Testing</h4>
-                          <p>As a Senior QA Analyst, my approach to testing web applications is both systematic and user-focused.  
-                          <br><br> I begin by thoroughly understanding the application’s requirements, user personas, and business
-                           goals to ensure my testing aligns with project objectives.</p>
-                          <!--<span>36 Hours</span>
-                          <span>4 Weeks</span>
-                          <span class="last-span">3 Certificates</span>-->
-                          <div class="text-button">
-                            <a href="webapp-testing.html">Read more</a>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <div class="left-image">
-                          <img src="assets/images/mobile-app.jpg" alt="">
-                          <div class="price"></div>
-                        </div>
-                        <div class="right-content">
-                          <h4>Mobile App Testing</h4>
-                          <p>As a Senior QA Analyst, testing mobile applications involves a meticulous and adaptive approach to address the unique challenges of mobile platforms.<br>
-                          <br> My goal is to ensure that the application performs flawlessly across diverse devices, operating systems, and network conditions while delivering a
-                           superior user experience.</p>
-                          <!--<span>48 Hours</span>
-                          <span>6 Weeks</span>
-                          <span class="last-span">1 Certificate</span>-->
-                          <div class="text-button">
-                            <a href="mobile-app-testing.html">Read more</a>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <div class="left-image">
-                          <img src="assets/images/manual-testing.jpg" alt="">
-                          <div class="price"></div>
-                        </div>
-                        <div class="right-content">
-                          <h4>Manual Testing</h4>
-                          <p>As a Senior QA Analyst, manual testing is at the core of my ability to ensure software quality by directly interacting with the application to validate its functionality, <br>
-                          <br>usability, and reliability. My approach is detail-oriented, user-focused, and adaptable to the unique needs of each project.</p>
-                          <div class="text-button">
-                            <a href="manual-testing.html">Read more</a>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <div class="left-image">
-                          <img src="assets/images/automated-testing.jpg" alt="">
-                          <div class="price"></div>
-                        </div>
-                        <div class="right-content">
-                          <h4>Automated Testing</h4>
-                          <p>As a Senior QA Analyst, I leverage automation to enhance testing efficiency, accuracy, and coverage, ensuring consistent software quality across releases. <br>
-                          <br>With tools like Playwright for UI automation and Postman for API testing, I focus on creating robust, maintainable, and scalable automated test suites.</p>
-                          <div class="text-button">
-                            <a href="automated-testing.html">Read more</a>
-                          </div>
-                        </div>
-                      </div>
-                      </li>
-                    </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="simple-cta">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-5 offset-lg-1">
-          <div class="left-image">
-            <img src="assets/images/portfolio-image-2.png" alt="">
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p class="big">
+              I build test strategies, find the issues that matter, and work closely with developers so each release is
+              better than the last.
+            </p>
+            <p>
+              I’ve worked with local and international teams, both hybrid and fully remote, at tech startups and established
+              companies alike. That range gives me a wide view of QA: I’ve seen what works on small teams and
+              what holds up at scale.
+            </p>
+            <p>
+              I enjoy turning complex problems into polished, user-friendly products. When I’m not testing, I’m usually
+              exploring new tools or sharing QA best practices with my team.
+            </p>
           </div>
-        </div>
-        <div class="col-lg-5 align-self-left">
-          <p style="font-size: 25px;"><strong>Companies I've worked with</strong></p><hr>
 
-          <p style="font-size: 19px;"><strong>MDU Solutions LLC (Aug 2022 - Jan 2025)</strong><br>
-            The company specializes in ISP services, Smart Homes and Units, 
-            Digital Signage, Security Cameras, Billing and Control Platforms, 
-            Access Control, and Community WiFi, offering innovative solutions 
-            to enhance connectivity, security, and convenience.</p><hr>
-
-          <p style="font-size: 19px;"><strong>COR Logic Solutions (Jan 2021 - Aug 2022)</strong><br>
-             Cor Logic is a premiere software company 
-             specializing in full-spectrum online logistics software. 
-             Company Album. album. Company Culture. Diverse Team.</p><hr>
-          
-          <p style="font-size: 19px;" ><strong>Pacific Blue IT (Feb 2018 - Jan 2021)</strong><br>
-            An Online Learning Center based in Japan that also 
-            provides paralegal solutions and a range of other professional services.</p><hr>
-        </div>
-      </div>
-    </div>
-  </section>
-
- <!-- <section class="testimonials" id="testimonials">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="section-heading">
-            <h6>Testimonials</h6>
-            <h4>What They <em>Think</em></h4>
-          </div>
-        </div>
-        <div class="col-lg-12">
-          <div class="owl-testimonials owl-carousel" style="position: relative; z-index: 5;">
-            <div class="item">
-              <p>“just think about TemplateMo if you need free CSS templates for your website”</p>
-                <h4>Catherine Walk</h4>
-                <span>CEO &amp; Founder</span>
-                <img src="assets/images/quote.png" alt="">
-            </div>
-            <div class="item">
-              <p>“think about our website first when you need free HTML templates for your website”</p>
-                <h4>David Martin</h4>
-                <span>CTO of Tech Company</span>
-                <img src="assets/images/quote.png" alt="">
-            </div>
-            <div class="item">
-              <p>“just think about our website wherever you need free templates for your website”</p>
-                <h4>Sophia Whity</h4>
-                <span>CEO and Co-Founder</span>
-                <img src="assets/images/quote.png" alt="">
-            </div>
-            <div class="item">
-              <p>“Praesent accumsan condimentum arcu, id porttitor est semper nec. Nunc diam lorem.”</p>
-                <h4>Helen Shiny</h4>
-                <span>Tech Officer</span>
-                <img src="assets/images/quote.png" alt="">
-            </div>
-            <div class="item">
-              <p>“Praesent accumsan condimentum arcu, id porttitor est semper nec. Nunc diam lorem.”</p>
-                <h4>George Soft</h4>
-                <span>Gadget Reviewer</span>
-                <img src="assets/images/quote.png" alt="">
-            </div>
-            <div class="item">
-              <p>“Praesent accumsan condimentum arcu, id porttitor est semper nec. Nunc diam lorem.”</p>
-                <h4>Andrew Hall</h4>
-                <span>Marketing Manager</span>
-                <img src="assets/images/quote.png" alt="">
-            </div>
-            <div class="item">
-              <p>“Praesent accumsan condimentum arcu, id porttitor est semper nec. Nunc diam lorem.”</p>
-                <h4>Maxi Power</h4>
-                <span>Fashion Designer</span>
-                <img src="assets/images/quote.png" alt="">
-            </div>
-            <div class="item">
-              <p>“Praesent accumsan condimentum arcu, id porttitor est semper nec. Nunc diam lorem.”</p>
-                <h4>Olivia Too</h4>
-                <span>Creative Designer</span>
-                <img src="assets/images/quote.png" alt="">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>-->
-
-  <section class="contact-us" id="contact-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8">
-          <div id="map">
-          
-            <!-- You just need to go to Google Maps for your own map point, and copy the embed code from Share -> Embed a map section -->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.3328154033784!2d123.71488827454922!3d13.14139451113398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a10350dbfa0967%3A0x47340de55d9e82a9!2sBagumbayan%20Daraga%20Albay!5e0!3m2!1sen!2sph!4v1736367016678!5m2!1sen!2sph" width="100%" height="420px" frameborder="0" style="border:0; border-radius: 15px; position: relative; z-index: 2;" allowfullscreen=""></iframe>
-            <div class="row">
-              <div class="col-lg-4 offset-lg-1">
-                <div class="contact-info">
-                  <div class="icon">
-                    <i class="fa fa-envelope-square"></i>
-                  </div>
-                  <h4>Email</h4>
-                  <span>aileenfusana@gmail.com</span>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="contact-info">
-                  <div class="icon">
-                    <i class="fa fa-phone"></i>
-                  </div>
-                  <h4>Mobile</h4>
-                  <span>+63912-394-4559</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <form id="contact" action="" method="post">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="section-heading">
-                  <h4>Contact <em>Me</em></h4>
-                  <p>If you need an assistance to your web apps and mobile apps. Feel free to contact me.</p>
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <input type="name" name="name" id="name" placeholder="Full Name" autocomplete="on" required>
-                </fieldset>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
-                </fieldset>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <textarea name="message" id="message" placeholder="Your Message"></textarea>
-                </fieldset>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <button type="submit" id="form-submit" class="main-gradient-button">Send Message</button>
-                </fieldset>
-              </div>
-            </div>
-          </form>
-        </div>
-        <div class="col-lg-12">
-          <ul class="social-icons">
-            <li><a href="https://www.facebook.com/yenpfusana/" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/aileen-fusana/" target="_blank" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-            <li><a href="https://github.com/yenyen123" target="_blank" title="Github"><i class="fa fa-github" ></i></a></li>
-            <li><a href="https://ph.jobstreet.com/profile/aileen-fusana-KVTCqTbGGH" target="_blank" title="Jobstreet"><i class="fa fa-briefcase"></i></a></li>
-            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+          <ul class="traits">
+            <li class="trait reveal">
+              <span class="trait-ico"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg></span>
+              <h3>Detail-oriented</h3>
+              <p>A track record of catching subtle bugs through meticulous, methodical testing.</p>
+            </li>
+            <li class="trait reveal">
+              <span class="trait-ico"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3"/><path d="M18 3v4h-4M6 21v-4h4"/></svg></span>
+              <h3>SDLC fluent</h3>
+              <p>Comfortable across Agile and DevOps workflows and a wide range of testing methods.</p>
+            </li>
+            <li class="trait reveal">
+              <span class="trait-ico"><svg viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></span>
+              <h3>Analytical</h3>
+              <p>I map how a change ripples through a complex system before it reaches production.</p>
+            </li>
+            <li class="trait reveal">
+              <span class="trait-ico"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>
+              <h3>Process improver</h3>
+              <p>I’ve repeatedly made testing processes faster and their outcomes more reliable.</p>
+            </li>
+            <li class="trait reveal">
+              <span class="trait-ico"><svg viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M6 10.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-5.5"/></svg></span>
+              <h3>Always learning</h3>
+              <p>I keep up with industry trends and new technologies in testing.</p>
+            </li>
+            <li class="trait reveal">
+              <span class="trait-ico"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4V5z"/><path d="M8 9.5h8M8 12.5h5"/></svg></span>
+              <h3>Clear communicator</h3>
+              <p>I write bug reports developers can act on right away, with clear steps and no guesswork.</p>
+            </li>
           </ul>
         </div>
-        <div class="col-lg-12">
-          <p class="copyright">Copyright © 2024 Aileen Fusana Portfolio. 
-          
-          <br>Designed By: <a rel="sponsored" href="https://templatemo.com" target="_blank">Aileen Fusana</a></p>
+      </div>
+    </section>
+
+    <!-- ============ EXPERTISE ============ -->
+    <section class="section section-alt" id="expertise">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">02 — Expertise</p>
+          <h2 class="title">Four disciplines, <em>one standard.</em></h2>
+          <p class="section-sub">I test manually and with automation, focusing on strategy, careful execution and steady improvement. Pick an area to see how I approach it.</p>
+        </div>
+
+        <div class="tabs reveal">
+          <div class="tab-list" role="tablist" aria-label="Areas of expertise">
+            <button role="tab" id="tab-web" aria-controls="panel-web" aria-selected="true">
+              <span class="tab-num">01</span> Web app testing
+            </button>
+            <button role="tab" id="tab-mobile" aria-controls="panel-mobile" aria-selected="false" tabindex="-1">
+              <span class="tab-num">02</span> Mobile app testing
+            </button>
+            <button role="tab" id="tab-manual" aria-controls="panel-manual" aria-selected="false" tabindex="-1">
+              <span class="tab-num">03</span> Manual testing
+            </button>
+            <button role="tab" id="tab-auto" aria-controls="panel-auto" aria-selected="false" tabindex="-1">
+              <span class="tab-num">04</span> Automated testing
+            </button>
+          </div>
+
+          <div class="tab-panels">
+            <article role="tabpanel" id="panel-web" aria-labelledby="tab-web" class="panel">
+              <header>
+                <h3>Web app testing</h3>
+                <p>I start from the requirements, user personas and business goals, so testing follows what the project needs to achieve.</p>
+                <div class="chips"><span>Playwright</span><span>Postman</span><span>Accessibility</span><span>Performance</span></div>
+              </header>
+              <ol class="cases">
+                <li><b>Test planning &amp; strategy</b> — scope, objectives, critical workflows and edge cases, defined up front.</li>
+                <li><b>Requirement analysis</b> — I clear up ambiguity with BAs, devs and PMs, then write positive, negative and boundary cases.</li>
+                <li><b>Automation</b> — Playwright for repetitive, critical flows and regression coverage.</li>
+                <li><b>API testing</b> — Postman checks that front end and back end communicate correctly.</li>
+                <li><b>Accessibility &amp; usability</b> — interfaces that are intuitive and work for everyone.</li>
+                <li><b>Performance &amp; security</b> — load and stress testing, plus close work with security specialists.</li>
+                <li><b>Continuous improvement</b> — post-release metrics feed back into the next cycle.</li>
+              </ol>
+            </article>
+
+            <article role="tabpanel" id="panel-mobile" aria-labelledby="tab-mobile" class="panel" hidden>
+              <header>
+                <h3>Mobile app testing</h3>
+                <p>Every device, OS version and network condition, covered with an adaptive, real-device-first approach.</p>
+                <div class="chips"><span>iOS</span><span>Android</span><span>Appium</span><span>OWASP Mobile</span></div>
+              </header>
+              <ol class="cases">
+                <li><b>Device matrix planning</b> — target audience, platform constraints and priorities mapped out early.</li>
+                <li><b>Real devices first</b> — emulators and simulators where they help, physical hardware where it counts.</li>
+                <li><b>Cross-platform compatibility</b> — a curated range of screen sizes and OS versions.</li>
+                <li><b>UI/UX &amp; accessibility</b> — Material Design, Apple’s HIG and WCAG compliance.</li>
+                <li><b>Performance &amp; battery</b> — Wi-Fi, 4G and 5G, with memory and battery drain monitored under load.</li>
+                <li><b>Network &amp; offline</b> — low bandwidth, dropped connections and clean data sync when a device reconnects.</li>
+                <li><b>Security</b> — data leaks, authentication flaws and insecure storage, checked against OWASP.</li>
+              </ol>
+            </article>
+
+            <article role="tabpanel" id="panel-manual" aria-labelledby="tab-manual" class="panel" hidden>
+              <header>
+                <h3>Manual testing</h3>
+                <p>Manual testing is how I put myself in the user’s place, checking that a product works and is pleasant to use.</p>
+                <div class="chips"><span>Exploratory</span><span>Regression</span><span>Jira</span><span>Bugzilla</span></div>
+              </header>
+              <ol class="cases">
+                <li><b>Risk-based planning</b> — high-risk areas and the workflows users depend on most come first.</li>
+                <li><b>Detailed test cases</b> — positive, negative, boundary and exploratory, modeled on real usage.</li>
+                <li><b>Exploratory sessions</b> — I look for the issues that scripted test cases miss.</li>
+                <li><b>UI/UX validation</b> — consistency, responsiveness and fidelity to the design spec.</li>
+                <li><b>Regression on every build</b> — new features shouldn’t break what already works.</li>
+                <li><b>Bug reports developers can act on</b> — steps to reproduce, screenshots and severity.</li>
+                <li><b>Cross-browser &amp; cross-device</b> — the same experience on every screen.</li>
+              </ol>
+            </article>
+
+            <article role="tabpanel" id="panel-auto" aria-labelledby="tab-auto" class="panel" hidden>
+              <header>
+                <h3>Automated testing</h3>
+                <p>Test suites that are robust, maintainable and scalable, checking every commit as part of CI/CD.</p>
+                <div class="chips"><span>Playwright</span><span>Postman + Newman</span><span>GitHub Actions</span><span>Jenkins</span></div>
+              </header>
+              <ol class="cases">
+                <li><b>Framework design</b> — modular and reusable, covering functional, regression and integration tests.</li>
+                <li><b>UI automation with Playwright</b> — Chrome, Firefox and Safari, on desktop and mobile viewports, including dynamic UIs.</li>
+                <li><b>API testing with Postman</b> — reusable collections and environments, with scripted workflows.</li>
+                <li><b>Smoke &amp; regression</b> — critical features checked on every build.</li>
+                <li><b>Data-driven tests</b> — parameterized runs that cover many inputs efficiently.</li>
+                <li><b>CI/CD quality gates</b> — Jenkins and GitHub Actions catch defects early.</li>
+                <li><b>Performance tracing</b> — Newman for API response times, Playwright traces for UI bottlenecks.</li>
+              </ol>
+            </article>
+          </div>
         </div>
       </div>
+    </section>
+
+    <!-- ============ APPROACH ============ -->
+    <section class="section" id="approach">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">03 — Approach</p>
+          <h2 class="title">How I keep quality <em>in the loop.</em></h2>
+          <p class="section-sub">The right QA strategy depends on the project, but mine always combines planning, execution, communication and continuous improvement, built on the SDLC.</p>
+        </div>
+
+        <div class="principles">
+          <article class="principle reveal">
+            <span class="p-num">↤</span>
+            <h3>Shift left</h3>
+            <p>I start testing early in development, when defects are cheapest to fix.</p>
+          </article>
+          <article class="principle reveal">
+            <span class="p-num">◎</span>
+            <h3>User-centric</h3>
+            <p>I test the way real users will use the product, so it’s usable and satisfying, not just technically correct.</p>
+          </article>
+          <article class="principle reveal">
+            <span class="p-num">∞</span>
+            <h3>Test early, test often</h3>
+            <p>Agile and DevOps habits keep testing continuous, from the first commit to the last release.</p>
+          </article>
+          <span class="bug bug-approach" data-bug role="button" tabindex="0" aria-label="A hidden bug — squash it"><svg viewBox="0 0 24 24"><use href="#i-bug"/></svg></span>
+        </div>
+
+        <ol class="pipeline reveal" aria-label="My testing lifecycle">
+          <li><span>Requirements</span></li>
+          <li><span>Plan</span></li>
+          <li><span>Design cases</span></li>
+          <li><span>Execute</span></li>
+          <li><span>Report</span></li>
+          <li><span>Improve</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section section-alt" id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">04 — Experience</p>
+          <h2 class="title">Where I’ve <em>made an impact.</em></h2>
+        </div>
+
+        <ol class="timeline">
+          <li class="job reveal">
+            <div class="job-when">Aug 2022 — Jan 2025</div>
+            <div class="job-card">
+              <h3>MDU Solutions LLC</h3>
+              <p>A provider of ISP services, smart homes and units, digital signage, security cameras, billing and control platforms, access control and community Wi-Fi.</p>
+              <div class="chips"><span>IoT &amp; smart home</span><span>Billing platforms</span><span>Remote</span></div>
+            </div>
+          </li>
+          <li class="job reveal">
+            <div class="job-when">Jan 2021 — Aug 2022</div>
+            <div class="job-card">
+              <h3>COR Logic Solutions</h3>
+              <p>A software company specializing in full-spectrum online logistics software.</p>
+              <div class="chips"><span>Logistics</span><span>Web apps</span></div>
+              <span class="bug bug-job" data-bug role="button" tabindex="0" aria-label="A hidden bug — squash it"><svg viewBox="0 0 24 24"><use href="#i-bug"/></svg></span>
+            </div>
+          </li>
+          <li class="job reveal">
+            <div class="job-when">Feb 2018 — Jan 2021</div>
+            <div class="job-card">
+              <h3>Pacific Blue IT</h3>
+              <p>A Japan-based online learning center that also provides paralegal solutions and other professional services.</p>
+              <div class="chips"><span>E-learning</span><span>International team</span></div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ LIFE ============ -->
+    <section class="section" id="life">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">05 — Off duty</p>
+          <h2 class="title">QA by day. <em>Furmom &amp; mom</em> always.</h2>
+          <p class="section-sub">When I’m not testing software, I’m caring for my four cats, cooking for my kid, or settling in for a family movie.</p>
+        </div>
+
+        <div class="bento">
+          <figure class="tile tile-desk reveal">
+            <img src="assets/img/desk-cats.webp" width="1200" height="900" loading="lazy" alt="Two cats napping on a desk beside a globe and a laptop showing code">
+            <figcaption><b>My co-workers</b> Four cats help keep me calm and focused, one nap at a time.</figcaption>
+          </figure>
+          <figure class="tile tile-piggy reveal">
+            <img src="assets/img/cat-piggy.webp" width="900" height="839" loading="lazy" alt="A grey fluffy cat wearing a blue tie">
+            <figcaption><b>Piggy</b> Head of Quality Assurance (self-appointed)</figcaption>
+          </figure>
+          <figure class="tile tile-garfie reveal">
+            <img src="assets/img/cat-garfie.webp" width="675" height="900" loading="lazy" alt="A fluffy orange cat seen from above">
+            <figcaption><b>Garfie</b> Senior Nap Engineer</figcaption>
+          </figure>
+          <figure class="tile tile-coffee reveal">
+            <img src="assets/img/coffee.webp" width="900" height="675" loading="lazy" alt="A cup of coffee">
+            <figcaption><b>Coffee breaks</b> Even a QA needs a perfectly brewed break.</figcaption>
+          </figure>
+          <figure class="tile tile-cook reveal">
+            <img src="assets/img/cooking.webp" width="640" height="427" loading="lazy" alt="A plate of spaghetti">
+            <figcaption><b>Testing recipes</b> Meals that pass my kid’s acceptance tests.</figcaption>
+          </figure>
+          <figure class="tile tile-movie reveal">
+            <img src="assets/img/movie.webp" width="640" height="427" loading="lazy" alt="Popcorn in front of a screen">
+            <figcaption><b>Movie night</b> Popcorn and screen time with the family.</figcaption>
+          </figure>
+        </div>
+
+        <div class="tickets-head reveal">
+          <h3>Open issues at home</h3>
+          <p>Logged by me. Marked “won’t fix” by the cats.</p>
+        </div>
+        <div class="tickets">
+          <article class="ticket reveal">
+            <div class="ticket-top"><code>CAT-001</code><span class="sev sev-crit">Critical</span></div>
+            <h4>Alarm clock has no snooze button</h4>
+            <p>Every cat in the house acts as an alarm. All of them default to 3 a.m.</p>
+            <div class="ticket-foot"><span class="status">Won’t fix</span><span>Reporter: Yen</span></div>
+          </article>
+          <article class="ticket reveal">
+            <div class="ticket-top"><code>CAT-002</code><span class="sev sev-high">High</span></div>
+            <h4>Privacy feature not implemented</h4>
+            <p>Bathroom breaks have turned into group meetings. Expected: some privacy. Actual: four attendees.</p>
+            <div class="ticket-foot"><span class="status">By design</span><span>Reporter: Yen</span></div>
+          </article>
+          <article class="ticket reveal">
+            <div class="ticket-top"><code>CAT-003</code><span class="sev sev-med">Medium</span></div>
+            <h4>All chairs reassigned as thrones</h4>
+            <p>The human has nowhere to sit. Seat-allocation logic favors whoever is furriest.</p>
+            <div class="ticket-foot"><span class="status">Won’t fix</span><span>Reporter: Yen</span></div>
+          </article>
+          <article class="ticket reveal">
+            <div class="ticket-top"><code>CAT-004</code><span class="sev sev-low">Low</span></div>
+            <h4>Netflix subscription redundant</h4>
+            <p>The cats’ daily drama provides more than enough entertainment. Consider cancelling.</p>
+            <div class="ticket-foot"><span class="status">Resolved</span><span>Reporter: Yen</span></div>
+            <span class="bug bug-ticket" data-bug role="button" tabindex="0" aria-label="A hidden bug — squash it"><svg viewBox="0 0 24 24"><use href="#i-bug"/></svg></span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact-card reveal">
+          <div class="contact-glow" aria-hidden="true"></div>
+          <p class="kicker">06 — Contact</p>
+          <h2 class="display contact-title">Let’s ship something <em>flawless.</em></h2>
+          <p class="lede">Need help testing a web or mobile app? I’d love to hear what you’re building.</p>
+          <div class="contact-actions">
+            <a class="btn btn-primary btn-lg" href="mailto:aileenfusana@gmail.com?subject=Hello%20Aileen%20%E2%80%94%20QA%20project">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3z"/><path d="M3 7l9 6 9-6"/></svg>
+              aileenfusana@gmail.com
+            </a>
+            <button class="btn btn-ghost btn-lg" id="copy-email" data-email="aileenfusana@gmail.com">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/></svg>
+              <span>Copy email</span>
+            </button>
+            <a class="btn btn-ghost btn-lg" href="tel:+639123944559">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>
+              +63 912 394 4559
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year">2026</span> Aileen Fusana · Senior QA Analyst</span>
+      <span class="footer-links">
+        <a href="#top">Back to top ↑</a>
+      </span>
+      <span class="bug bug-footer" data-bug role="button" tabindex="0" aria-label="A hidden bug — squash it"><svg viewBox="0 0 24 24"><use href="#i-bug"/></svg></span>
     </div>
-  </section>
+  </footer>
 
-  <!-- Scripts -->
-  <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-    <script src="assets/js/isotope.min.js"></script>
-    <script src="assets/js/owl-carousel.js"></script>
-    <script src="assets/js/lightbox.js"></script>
-    <script src="assets/js/tabs.js"></script>
-    <script src="assets/js/video.js"></script>
-    <script src="assets/js/slick-slider.js"></script>
-    <script src="assets/js/custom.js"></script>
-    <script>
-        //according to loftblog tut
-        $('.nav li:first').addClass('active');
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-bug" viewBox="0 0 24 24">
+      <ellipse cx="12" cy="14" rx="5.5" ry="6.5" fill="currentColor"/>
+      <circle cx="12" cy="6.5" r="3" fill="currentColor"/>
+      <path d="M12 8v12.5M6.5 11H3M6.5 15H2.5M7 19l-3 2M17.5 11H21M17.5 15h4M17 19l3 2M10 4L8 1.5M14 4l2-2.5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+    </symbol>
+  </svg>
 
-        var showSection = function showSection(section, isAnimate) {
-          var
-          direction = section.replace(/#/, ''),
-          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
-          reqSectionPos = reqSection.offset().top - 0;
-
-          if (isAnimate) {
-            $('body, html').animate({
-              scrollTop: reqSectionPos },
-            800);
-          } else {
-            $('body, html').scrollTop(reqSectionPos);
-          }
-
-        };
-
-        var checkSection = function checkSection() {
-          $('.section').each(function () {
-            var
-            $this = $(this),
-            topEdge = $this.offset().top - 80,
-            bottomEdge = topEdge + $this.height(),
-            wScroll = $(window).scrollTop();
-            if (topEdge < wScroll && bottomEdge > wScroll) {
-              var
-              currentId = $this.data('section'),
-              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
-              reqLink.closest('li').addClass('active').
-              siblings().removeClass('active');
-            }
-          });
-        };
-
-        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
-          e.preventDefault();
-          showSection($(this).attr('href'), true);
-        });
-
-        $(window).scroll(function () {
-          checkSection();
-        });
-    </script>
+  <script src="assets/js/portfolio.js" defer></script>
 </body>
-
 </html>
