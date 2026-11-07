@@ -228,7 +228,8 @@ em { font-style: italic; }
   padding: 7px 14px 7px 12px; border: 1px solid var(--line-strong); border-radius: 999px;
   margin-bottom: 28px;
 }
-.pulse { width: 8px; height: 8px; border-radius: 50%; background: var(--pass); box-shadow: 0 0 0 0 var(--pass); animation: pulse 2s infinite; }
+.eyebrow .nowrap { white-space: nowrap; }
+.pulse { flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--pass); box-shadow: 0 0 0 0 var(--pass); animation: pulse 2s infinite; }
 @keyframes pulse {
   0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--pass) 60%, transparent); }
   70% { box-shadow: 0 0 0 10px transparent; }
@@ -610,6 +611,8 @@ em { font-style: italic; }
   .section { padding: 90px 0; }
   .section-head { margin-bottom: 44px; }
   .brand-name { display: none; }
+  .eyebrow { font-size: .72rem; display: flex; flex-wrap: wrap; column-gap: .5ch; row-gap: 2px; width: fit-content; }
+  .eyebrow .pulse { margin-right: 4px; align-self: center; }
   .nav-cta { display: none; }
   .stats { gap: 18px 32px; }
   .stats dd { font-size: 2.3rem; }
