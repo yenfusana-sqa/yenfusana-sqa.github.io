@@ -39,7 +39,7 @@
         links.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + en.target.id); });
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
-    document.querySelectorAll('main section[id]').forEach(function (s) { spy.observe(s); });
+    document.querySelectorAll('.hero, main section[id]').forEach(function (s) { spy.observe(s); });
   }
 
   /* ---------- Reveal on scroll ---------- */
@@ -94,7 +94,7 @@
     { t: '  ✓ speaks dev & product', c: 't-pass' },
     { t: '  ✓ ships with confidence', c: 't-pass' },
     { t: '' },
-    { t: '  6 passed (7y 2m)', c: 't-sum' }
+    { t: '  6 passed (7+ years)', c: 't-sum' }
   ];
   function esc(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
   function renderTerm(n, partial) {
